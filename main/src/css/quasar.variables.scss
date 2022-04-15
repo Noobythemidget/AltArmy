@@ -1,0 +1,110 @@
+// Quasar SCSS (& Sass) Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass/SCSS variables found in Quasar's source Sass/SCSS files.
+
+// Check documentation for full list of Quasar variables
+
+// Your own variables (that are declared here) and Quasar's own
+// ones will be available out of the box in your .vue/.scss/.sass files
+
+// It's highly recommended to change the default colors
+// to match your app's branding.
+// Tip: Use the "Theme Builder" on Quasar's documentation website.
+
+$primary   : #2f8eed;
+$secondary : #26a69a;
+$accent    : #f0a055;
+
+$dark      : #1D1D1D;
+
+$positive  : #21BA45;
+$negative  : #98002E; // same as heat red
+$info      : #31CCEC;
+$warning   : #F9A01B; //#F2C037; same as heat yellow
+
+// --------------------------------
+//          color sets
+// --------------------------------
+$heat-black         : black;
+$heat-red           : #98002E;
+$heat-yellow        : #F9A01B;
+
+$dolphin-aqua       : #008E97;
+$dolphin-orange     : #FC4C02;
+$dolphi-blue        : #005778;
+
+$panther-navy       : #041E42;
+$pather-red         : #C8102E;
+$panther-tan        : #B9975B;
+
+$cane-orange        : #F47321;
+$cane-green         : #005030;
+$cane-white         : white;
+
+$panther-navy2      : #081E3F;
+$panther-gold       : #B6862C;
+
+// --------------------------------
+
+$mainbg             :   $dark;                  // used in main toolbar and other derivatives
+$mainpagebg         :   lighten($mainbg,20%);   // border area outside of main pages
+$labels             : #F9A01B;                // labels and headers
+$expandRowButton    :   $positive;              // expand row button
+
+
+$standard-padding   : 8px;
+
+// --------------------------------
+//      Dark Set
+// --------------------------------
+/* MainLayout.vue */
+$main-toolbar-background                    : $dark;
+$main-toolbar-text-icon                     : $heat-yellow;
+$main-container-background                  : lighten($main-toolbar-background, 30%);
+
+/* TODO left drawer */
+
+/* AABaseTable.vue */
+$top-table-head-foot-background             : lighten($main-toolbar-background, 5%);
+$top-table-head-foot-text-icon              : $heat-yellow;     // <-- also used in AAToolbar.vue for the search field
+$top-table-border-color                     : rgba(255, 255, 255, 0);
+
+$top-table-row-background-odd               : lighten($main-toolbar-background, 15%);
+$top-table-row-text-odd                     : darken(white, 10%);
+
+$top-table-row-background-even              : lighten($main-toolbar-background, 20%);
+$top-table-row-text-even                    : darken(white, 10%);
+
+$top-table-expanded-row-background-odd      : lighten($main-toolbar-background, 25%);  // lighten($main-toolbar-background, 20%);
+$top-table-expanded-row-background-even     : lighten($main-toolbar-background, 25%);
+$top-table-expanded-row-padding             : $standard-padding; // padding around the content of expanded row
+
+/* AAToolbar.vue */
+
+// TODO
+
+/* AACharactersPage.vue */
+$character-tab-panel-top-background         : $top-table-head-foot-background;      
+$character-tab-panel-body-background        : lighten($main-toolbar-background, 30%);
+$character-tab-text-icon                    : $main-toolbar-text-icon;
+$character-tab-panel-padding                : $standard-padding; // 16px is default   -- padding in q-tab-panels body around sub tables (wallet, inventory, notes)
+
+$sub-table-head-foot-background             : lighten($main-toolbar-background, 5%);
+$sub-table-head-foot-text-icon              : $main-toolbar-text-icon;
+
+$sub-table-row-background-odd               : lighten($main-toolbar-background, 15%);
+$sub-table-row-text-odd                     : darken(white, 10%);
+
+$sub-table-row-background-even              : lighten($main-toolbar-background, 20%);
+$sub-table-row-text-even                    : darken(white, 10%);
+
+$sub-table-border-radius                    : 15px; // rounded corners
+
+/* AALocationsView.vue */
+$character-details-label                    : darken(white, 20%);
+$character-details-caption                  : darken(white, 40%);
+
+// these aren't working
+$locations-view-background                  : $top-table-head-foot-background;
+$locations-view-text-icon                   : red; //darken(white, 10%)

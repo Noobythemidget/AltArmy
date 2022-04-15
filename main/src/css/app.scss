@@ -1,0 +1,333 @@
+// app global css in SCSS form
+
+/*************************************************************/
+/* Fonts */
+/*************************************************************/
+@font-face {
+  font-family: ringbearer;
+  src: url(assets/fonts/ringbearer-font/RingbearerMedium-51mgZ.ttf);
+}
+
+@font-face {
+  font-family: theonering;
+  src: url(assets/fonts/the-one-ring-font/Theonering-Xq3d.ttf);
+}
+
+// tengwar annatar
+@font-face {
+    font-family: tengwar-annatar;
+    font-style: normal;
+    font-weight: normal;
+    src: url(src/assets/fonts/tengwar_annatar/tngan.ttf);
+}
+
+@font-face {
+    font-family: tengwar-annatar-italic;
+    font-style: italic;
+    font-weight: normal;
+    src: url(src/assets/fonts/tengwar_annatar/tngani.ttf);
+}
+
+@font-face {
+    font-family: tengwar-annatar-bold;
+    font-style: normal;
+    font-weight: bold;
+    src: url(src/assets/fonts/tengwar_annatar/tnganb.ttf);
+}
+
+@font-face {
+    font-family: tengwar-annatar-italic-bold;
+    font-style: italic;
+    font-weight: bold;
+    src: url(src/assets/fonts/tengwar_annatar/tnganbi.ttf);
+}
+
+@font-face{
+  font-family: alt-army;
+  font-style: normal;
+  src: url(src/assets/fonts/alt-army-font/alt-army.woff);
+}
+
+// declare a class which applies it
+.ringbearer-font {
+  font-family: 'ringbearer';
+}
+.theonering-font {
+  font-family: 'theonering';
+  transform: scale(3,3) rotate(30deg)
+}
+.tengwarannatar-font {
+    font-family: 'tengwar-annatar-italic';
+    line-height: 2.6em!important;
+}
+
+.ring {
+    font-family: 'tengwar-annatar-italic';
+    // line-height: 2.6em!important;
+    user-select: none;
+
+    // temporary
+    color: #000000; //                      #f0a055; 
+    -webkit-text-stroke-width:  0.25px;
+    -webkit-text-stroke-color:  #000000;
+    font-size:                  30px;
+    animation:                  spinoffPulse 30s linear infinite, glow2 3s ease-in-out infinite alternate;
+}
+
+.ring-slow {
+    font-family: 'tengwar-annatar-italic';
+    line-height: 2.6em!important;
+    user-select: none;
+
+    // temporary
+    color: #000000; //                      #f0a055; 
+    -webkit-text-stroke-width:  0.25px;
+    -webkit-text-stroke-color:  #000000;
+    font-size:                  30px;
+    animation:                  spinoffPulse 30s linear infinite, glow2 7s ease-in-out 10s infinite alternate;
+}
+
+.ring-slow2 {
+    font-family: 'tengwar-annatar-italic';
+    line-height: 2.6em!important;
+    user-select: none;
+
+    // temporary
+    color: #000000; //                      #f0a055; 
+    -webkit-text-stroke-width:  0.25px;
+    -webkit-text-stroke-color:  #000000;
+    font-size:                  30px;
+    animation:                  spinoffPulse 30s linear infinite, glow3 20s ease-in-out 10s infinite alternate;
+}
+
+.ring-slow3 {
+    font-family: 'tengwar-annatar-italic';
+    line-height: 2.6em!important;
+    user-select: none;
+
+    // temporary
+    color: transparent; //#000000; //                      #f0a055; 
+    -webkit-text-stroke-width:  0.25px;
+    -webkit-text-stroke-color:  #000000;
+    font-size:                  30px;
+    animation:                  spinoffPulse 30s linear infinite, glow3 20s ease-in-out 10s 1 both;
+}
+
+.fire {
+    // temporary
+    color: #000000; //                      #f0a055; 
+    -webkit-text-stroke-width:  0.25px;
+    -webkit-text-stroke-color:  #000000;
+    font-size:                  30px;
+    animation:                  glow2 5s ease-in-out infinite alternate;
+}
+
+/*
+MainLayout.vue
+*/
+
+//////
+.glow {
+  font-size: 40px;
+  color: rgb(202, 138, 53);
+  text-align: center;
+  animation: glow 10s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    color:  #000000;
+          //  #f00000,
+          //  #f0a000,
+          //  #f0a055;
+    
+    // text-shadow:    0 0 10px #f0a055, 
+    //                 0 0 30px #f0a055, 
+    //                 0 0 50px #f0a055, 
+    //                 0 0 70px #f0a055;
+
+    text-shadow:  0 0 10px #000000;
+  }
+
+  10% {
+    color: #403000;
+    text-shadow:  0 0 10px #f0a055,
+                  0 0 30px #d07000;  
+  }
+
+  20% {
+    color: #d07000;
+    text-shadow:  0 0 10px #f0a055, 
+                  0 0 30px #f0a055, 
+                  0 0 50px #ff0000;
+  }
+
+  40% {
+    color: #f0a000;
+    text-shadow:  0 0 10px #f0a055, 
+                  0 0 30px #f0a055, 
+                  0 0 50px #ff0000
+                  0 0 70px #ff0000;
+  }
+
+  50% {
+    color: #f0a055;
+    text-shadow:  0 0 20px #f0a055, 
+                  0 0 40px #f0a055, 
+                  0 0 60px #ff0000, 
+                  0 0 80px #ff0000;
+  }
+
+  80% {
+    color: #f0a055;
+    text-shadow:  0 0 20px #f0a055, 
+                  0 0 40px #f0a055, 
+                  0 0 60px #ff0000,
+                  0 0 120px #ff0000;
+  }
+
+  100% {
+    color: #f0a055;
+    text-shadow:  0 0 20px #f0a055, 
+                  0 0 40px #f0a055, 
+                  0 0 60px #ff0000,
+                  0 0 120px #ff0000;
+  }
+  // 100% {
+  //   color: #f0a055;
+  //   text-shadow:  0 0 20px #f0a055, 
+  //                 0 0 20px #f0a055,
+  //                 0 0 40px #ff0000, 
+  //                 0 0 60px #ff0000, 
+  //                 0 0 80px #ff0000,
+  //                 0 0 120px #ff0000;
+  //   -webkit-text-stroke-width:  0.25px;
+  //   -webkit-text-stroke-color:  #000000;
+  // }
+}
+
+@keyframes glow2 {
+  0% {
+    color:                      #000000;
+    // -webkit-text-stroke-color:  #000000;
+    // -webkit-text-stroke-width:  0px;
+
+    text-shadow:    0 0 0px     #000000; //#f0a055;
+  }
+
+  100% {
+    color:                      #f0a055;
+    // -webkit-text-stroke-color:  #f0a055;
+    // -webkit-text-stroke-width:  0.25px;
+
+    // text-shadow:    0 0 20px    #FF0000, 
+    //                 0 0 40px    #FF0000, 
+    //                 0 0 60px    #FF0000, 
+    //                 0 0 80px    #FF0000;
+
+    text-shadow:    0 0 20px    #FF0000, 
+                    0 0 40px    #FF0000, 
+                    0 0 60px    #f0a055,
+                    0 0 80px    #f0a055,
+  }
+}
+
+@keyframes glow3 {
+  0% {
+    color:                      #000000;
+    text-shadow:    0 0 0px     #000000; //#f0a055;
+  }
+  // no changes from 0-50%. increase duration by 2x
+  50% {
+    color:                      #000000;
+    text-shadow:    0 0 0px     #000000; //#f0a055;
+  }
+
+  100% {
+    color:                      #f0a055;
+    text-shadow:    0 0 20px    #FF0000, 
+                    0 0 40px    #FF0000, 
+                    0 0 60px    #f0a055,
+                    0 0 80px    #f0a055,
+  }
+}
+
+@keyframes glow4 {
+  0% {
+    color:                      #000000;
+    text-shadow:    0 0 0px     #000000; //#f0a055;
+  }
+
+  50% {
+    color:                      #f0a055;
+    text-shadow:    0 0 20px    #FF0000, 
+                    0 0 40px    #FF0000, 
+                    0 0 60px    #f0a055,
+                    0 0 80px    #f0a055;
+  }
+
+  100% {
+    color:                      #f0a055;
+    text-shadow:    0 0 20px    #FF0000, 
+                    0 0 40px    #FF0000;
+  }
+}
+
+@keyframes spinoffPulse {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/*************************************************************/
+/*************************************************************/
+/*************************************************************/
+/*************************************************************/
+
+
+// .base-table-body-expanded-row {
+//     background: $accent;
+// }
+
+// @media (prefers-color-scheme: light) {
+// /* override styles here */
+
+// }
+
+// .body--light {
+//   /* ... */
+//     background: $primary;
+// }
+
+// .body--dark {
+//   /* ... */
+//     background: $dark;
+// }
+
+// .main-toolbar {
+//   background: $primary;
+// }
+
+// @media (prefers-color-scheme: dark) {
+// /* override styles here */
+//   .main-toolbar {
+//     background: $dark;
+//   }
+// }
+
+// @media (prefers-color-scheme: light) {
+//   .main-toolbar {
+//     background: $primary;
+//   }
+// }
+
+
+/**********************************************************/
+/**********************************************************/
+/***                   Themes Below                     ***/
+/**********************************************************/
+/**********************************************************/
+
