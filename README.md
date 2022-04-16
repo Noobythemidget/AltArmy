@@ -13,7 +13,7 @@ Download and install the plugin. Enable it for characters you want to track. The
 \
 \
 Download the Alt Army installer here:
-https://github.com/Noobythemidget/AltArmy/tree/main/Downloads
+https://github.com/Noobythemidget/AltArmy/releases/tag/v0.1.0-beta
 
 \
 \
